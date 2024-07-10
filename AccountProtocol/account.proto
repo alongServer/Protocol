@@ -1,0 +1,30 @@
+syntax = "proto3";
+option go_package = "./;account";
+package account;
+
+service Register{
+  rpc RegisterRequest(RegisterReq) returns (RegisterResp);
+}
+
+service Login{
+  rpc LoginRequest(LoginReq) returns(LoginResp);
+}
+
+message RegisterReq {
+  int32 account_type = 1;
+  uint32 account_num = 2;
+  string pass_word = 3;
+}
+
+message RegisterResp {
+  bool ok = 1;
+}
+
+message LoginReq{
+  uint32 account_num = 1;
+  string pass_word = 2;
+}
+
+message LoginResp {
+  bool ok = 1;
+}
