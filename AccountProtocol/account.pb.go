@@ -2,15 +2,11 @@
 // versions:
 // 	protoc-gen-go v1.26.0
 // 	protoc        v3.18.1
-// source: account.proto
+// source: AccountProtocol/account.proto
 
 package account
 
 import (
-	context "context"
-	grpc "google.golang.org/grpc"
-	codes "google.golang.org/grpc/codes"
-	status "google.golang.org/grpc/status"
 	protoreflect "google.golang.org/protobuf/reflect/protoreflect"
 	protoimpl "google.golang.org/protobuf/runtime/protoimpl"
 	reflect "reflect"
@@ -37,7 +33,7 @@ type RegisterReq struct {
 func (x *RegisterReq) Reset() {
 	*x = RegisterReq{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_account_proto_msgTypes[0]
+		mi := &file_AccountProtocol_account_proto_msgTypes[0]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -50,7 +46,7 @@ func (x *RegisterReq) String() string {
 func (*RegisterReq) ProtoMessage() {}
 
 func (x *RegisterReq) ProtoReflect() protoreflect.Message {
-	mi := &file_account_proto_msgTypes[0]
+	mi := &file_AccountProtocol_account_proto_msgTypes[0]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -63,7 +59,7 @@ func (x *RegisterReq) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RegisterReq.ProtoReflect.Descriptor instead.
 func (*RegisterReq) Descriptor() ([]byte, []int) {
-	return file_account_proto_rawDescGZIP(), []int{0}
+	return file_AccountProtocol_account_proto_rawDescGZIP(), []int{0}
 }
 
 func (x *RegisterReq) GetAccountType() int32 {
@@ -98,7 +94,7 @@ type RegisterResp struct {
 func (x *RegisterResp) Reset() {
 	*x = RegisterResp{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_account_proto_msgTypes[1]
+		mi := &file_AccountProtocol_account_proto_msgTypes[1]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -111,7 +107,7 @@ func (x *RegisterResp) String() string {
 func (*RegisterResp) ProtoMessage() {}
 
 func (x *RegisterResp) ProtoReflect() protoreflect.Message {
-	mi := &file_account_proto_msgTypes[1]
+	mi := &file_AccountProtocol_account_proto_msgTypes[1]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -124,7 +120,7 @@ func (x *RegisterResp) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use RegisterResp.ProtoReflect.Descriptor instead.
 func (*RegisterResp) Descriptor() ([]byte, []int) {
-	return file_account_proto_rawDescGZIP(), []int{1}
+	return file_AccountProtocol_account_proto_rawDescGZIP(), []int{1}
 }
 
 func (x *RegisterResp) GetOk() bool {
@@ -146,7 +142,7 @@ type LoginReq struct {
 func (x *LoginReq) Reset() {
 	*x = LoginReq{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_account_proto_msgTypes[2]
+		mi := &file_AccountProtocol_account_proto_msgTypes[2]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -159,7 +155,7 @@ func (x *LoginReq) String() string {
 func (*LoginReq) ProtoMessage() {}
 
 func (x *LoginReq) ProtoReflect() protoreflect.Message {
-	mi := &file_account_proto_msgTypes[2]
+	mi := &file_AccountProtocol_account_proto_msgTypes[2]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -172,7 +168,7 @@ func (x *LoginReq) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use LoginReq.ProtoReflect.Descriptor instead.
 func (*LoginReq) Descriptor() ([]byte, []int) {
-	return file_account_proto_rawDescGZIP(), []int{2}
+	return file_AccountProtocol_account_proto_rawDescGZIP(), []int{2}
 }
 
 func (x *LoginReq) GetAccountNum() uint32 {
@@ -200,7 +196,7 @@ type LoginResp struct {
 func (x *LoginResp) Reset() {
 	*x = LoginResp{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_account_proto_msgTypes[3]
+		mi := &file_AccountProtocol_account_proto_msgTypes[3]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -213,7 +209,7 @@ func (x *LoginResp) String() string {
 func (*LoginResp) ProtoMessage() {}
 
 func (x *LoginResp) ProtoReflect() protoreflect.Message {
-	mi := &file_account_proto_msgTypes[3]
+	mi := &file_AccountProtocol_account_proto_msgTypes[3]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -226,7 +222,7 @@ func (x *LoginResp) ProtoReflect() protoreflect.Message {
 
 // Deprecated: Use LoginResp.ProtoReflect.Descriptor instead.
 func (*LoginResp) Descriptor() ([]byte, []int) {
-	return file_account_proto_rawDescGZIP(), []int{3}
+	return file_AccountProtocol_account_proto_rawDescGZIP(), []int{3}
 }
 
 func (x *LoginResp) GetOk() bool {
@@ -236,10 +232,11 @@ func (x *LoginResp) GetOk() bool {
 	return false
 }
 
-var File_account_proto protoreflect.FileDescriptor
+var File_AccountProtocol_account_proto protoreflect.FileDescriptor
 
-var file_account_proto_rawDesc = []byte{
-	0x0a, 0x0d, 0x61, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12,
+var file_AccountProtocol_account_proto_rawDesc = []byte{
+	0x0a, 0x1d, 0x41, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x63, 0x6f,
+	0x6c, 0x2f, 0x61, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x12,
 	0x07, 0x61, 0x63, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x22, 0x6e, 0x0a, 0x0b, 0x52, 0x65, 0x67, 0x69,
 	0x73, 0x74, 0x65, 0x72, 0x52, 0x65, 0x71, 0x12, 0x21, 0x0a, 0x0c, 0x61, 0x63, 0x63, 0x6f, 0x75,
 	0x6e, 0x74, 0x5f, 0x74, 0x79, 0x70, 0x65, 0x18, 0x01, 0x20, 0x01, 0x28, 0x05, 0x52, 0x0b, 0x61,
@@ -270,25 +267,25 @@ var file_account_proto_rawDesc = []byte{
 }
 
 var (
-	file_account_proto_rawDescOnce sync.Once
-	file_account_proto_rawDescData = file_account_proto_rawDesc
+	file_AccountProtocol_account_proto_rawDescOnce sync.Once
+	file_AccountProtocol_account_proto_rawDescData = file_AccountProtocol_account_proto_rawDesc
 )
 
-func file_account_proto_rawDescGZIP() []byte {
-	file_account_proto_rawDescOnce.Do(func() {
-		file_account_proto_rawDescData = protoimpl.X.CompressGZIP(file_account_proto_rawDescData)
+func file_AccountProtocol_account_proto_rawDescGZIP() []byte {
+	file_AccountProtocol_account_proto_rawDescOnce.Do(func() {
+		file_AccountProtocol_account_proto_rawDescData = protoimpl.X.CompressGZIP(file_AccountProtocol_account_proto_rawDescData)
 	})
-	return file_account_proto_rawDescData
+	return file_AccountProtocol_account_proto_rawDescData
 }
 
-var file_account_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
-var file_account_proto_goTypes = []interface{}{
+var file_AccountProtocol_account_proto_msgTypes = make([]protoimpl.MessageInfo, 4)
+var file_AccountProtocol_account_proto_goTypes = []interface{}{
 	(*RegisterReq)(nil),  // 0: account.RegisterReq
 	(*RegisterResp)(nil), // 1: account.RegisterResp
 	(*LoginReq)(nil),     // 2: account.LoginReq
 	(*LoginResp)(nil),    // 3: account.LoginResp
 }
-var file_account_proto_depIdxs = []int32{
+var file_AccountProtocol_account_proto_depIdxs = []int32{
 	0, // 0: account.Register.RegisterRequest:input_type -> account.RegisterReq
 	2, // 1: account.Login.LoginRequest:input_type -> account.LoginReq
 	1, // 2: account.Register.RegisterRequest:output_type -> account.RegisterResp
@@ -300,13 +297,13 @@ var file_account_proto_depIdxs = []int32{
 	0, // [0:0] is the sub-list for field type_name
 }
 
-func init() { file_account_proto_init() }
-func file_account_proto_init() {
-	if File_account_proto != nil {
+func init() { file_AccountProtocol_account_proto_init() }
+func file_AccountProtocol_account_proto_init() {
+	if File_AccountProtocol_account_proto != nil {
 		return
 	}
 	if !protoimpl.UnsafeEnabled {
-		file_account_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
+		file_AccountProtocol_account_proto_msgTypes[0].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*RegisterReq); i {
 			case 0:
 				return &v.state
@@ -318,7 +315,7 @@ func file_account_proto_init() {
 				return nil
 			}
 		}
-		file_account_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
+		file_AccountProtocol_account_proto_msgTypes[1].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*RegisterResp); i {
 			case 0:
 				return &v.state
@@ -330,7 +327,7 @@ func file_account_proto_init() {
 				return nil
 			}
 		}
-		file_account_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
+		file_AccountProtocol_account_proto_msgTypes[2].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*LoginReq); i {
 			case 0:
 				return &v.state
@@ -342,7 +339,7 @@ func file_account_proto_init() {
 				return nil
 			}
 		}
-		file_account_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
+		file_AccountProtocol_account_proto_msgTypes[3].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*LoginResp); i {
 			case 0:
 				return &v.state
@@ -359,170 +356,18 @@ func file_account_proto_init() {
 	out := protoimpl.TypeBuilder{
 		File: protoimpl.DescBuilder{
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
-			RawDescriptor: file_account_proto_rawDesc,
+			RawDescriptor: file_AccountProtocol_account_proto_rawDesc,
 			NumEnums:      0,
 			NumMessages:   4,
 			NumExtensions: 0,
 			NumServices:   2,
 		},
-		GoTypes:           file_account_proto_goTypes,
-		DependencyIndexes: file_account_proto_depIdxs,
-		MessageInfos:      file_account_proto_msgTypes,
+		GoTypes:           file_AccountProtocol_account_proto_goTypes,
+		DependencyIndexes: file_AccountProtocol_account_proto_depIdxs,
+		MessageInfos:      file_AccountProtocol_account_proto_msgTypes,
 	}.Build()
-	File_account_proto = out.File
-	file_account_proto_rawDesc = nil
-	file_account_proto_goTypes = nil
-	file_account_proto_depIdxs = nil
-}
-
-// Reference imports to suppress errors if they are not otherwise used.
-var _ context.Context
-var _ grpc.ClientConnInterface
-
-// This is a compile-time assertion to ensure that this generated file
-// is compatible with the grpc package it is being compiled against.
-const _ = grpc.SupportPackageIsVersion6
-
-// RegisterClient is the client API for Register service.
-//
-// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
-type RegisterClient interface {
-	RegisterRequest(ctx context.Context, in *RegisterReq, opts ...grpc.CallOption) (*RegisterResp, error)
-}
-
-type registerClient struct {
-	cc grpc.ClientConnInterface
-}
-
-func NewRegisterClient(cc grpc.ClientConnInterface) RegisterClient {
-	return &registerClient{cc}
-}
-
-func (c *registerClient) RegisterRequest(ctx context.Context, in *RegisterReq, opts ...grpc.CallOption) (*RegisterResp, error) {
-	out := new(RegisterResp)
-	err := c.cc.Invoke(ctx, "/account.Register/RegisterRequest", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-// RegisterServer is the server API for Register service.
-type RegisterServer interface {
-	RegisterRequest(context.Context, *RegisterReq) (*RegisterResp, error)
-}
-
-// UnimplementedRegisterServer can be embedded to have forward compatible implementations.
-type UnimplementedRegisterServer struct {
-}
-
-func (*UnimplementedRegisterServer) RegisterRequest(context.Context, *RegisterReq) (*RegisterResp, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method RegisterRequest not implemented")
-}
-
-func RegisterRegisterServer(s *grpc.Server, srv RegisterServer) {
-	s.RegisterService(&_Register_serviceDesc, srv)
-}
-
-func _Register_RegisterRequest_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(RegisterReq)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(RegisterServer).RegisterRequest(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/account.Register/RegisterRequest",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(RegisterServer).RegisterRequest(ctx, req.(*RegisterReq))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-var _Register_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "account.Register",
-	HandlerType: (*RegisterServer)(nil),
-	Methods: []grpc.MethodDesc{
-		{
-			MethodName: "RegisterRequest",
-			Handler:    _Register_RegisterRequest_Handler,
-		},
-	},
-	Streams:  []grpc.StreamDesc{},
-	Metadata: "account.proto",
-}
-
-// LoginClient is the client API for Login service.
-//
-// For semantics around ctx use and closing/ending streaming RPCs, please refer to https://godoc.org/google.golang.org/grpc#ClientConn.NewStream.
-type LoginClient interface {
-	LoginRequest(ctx context.Context, in *LoginReq, opts ...grpc.CallOption) (*LoginResp, error)
-}
-
-type loginClient struct {
-	cc grpc.ClientConnInterface
-}
-
-func NewLoginClient(cc grpc.ClientConnInterface) LoginClient {
-	return &loginClient{cc}
-}
-
-func (c *loginClient) LoginRequest(ctx context.Context, in *LoginReq, opts ...grpc.CallOption) (*LoginResp, error) {
-	out := new(LoginResp)
-	err := c.cc.Invoke(ctx, "/account.Login/LoginRequest", in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
-// LoginServer is the server API for Login service.
-type LoginServer interface {
-	LoginRequest(context.Context, *LoginReq) (*LoginResp, error)
-}
-
-// UnimplementedLoginServer can be embedded to have forward compatible implementations.
-type UnimplementedLoginServer struct {
-}
-
-func (*UnimplementedLoginServer) LoginRequest(context.Context, *LoginReq) (*LoginResp, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method LoginRequest not implemented")
-}
-
-func RegisterLoginServer(s *grpc.Server, srv LoginServer) {
-	s.RegisterService(&_Login_serviceDesc, srv)
-}
-
-func _Login_LoginRequest_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(LoginReq)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(LoginServer).LoginRequest(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: "/account.Login/LoginRequest",
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(LoginServer).LoginRequest(ctx, req.(*LoginReq))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
-var _Login_serviceDesc = grpc.ServiceDesc{
-	ServiceName: "account.Login",
-	HandlerType: (*LoginServer)(nil),
-	Methods: []grpc.MethodDesc{
-		{
-			MethodName: "LoginRequest",
-			Handler:    _Login_LoginRequest_Handler,
-		},
-	},
-	Streams:  []grpc.StreamDesc{},
-	Metadata: "account.proto",
+	File_AccountProtocol_account_proto = out.File
+	file_AccountProtocol_account_proto_rawDesc = nil
+	file_AccountProtocol_account_proto_goTypes = nil
+	file_AccountProtocol_account_proto_depIdxs = nil
 }
